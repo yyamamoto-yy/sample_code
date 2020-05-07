@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- IEを互換表示させない為の設定 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- レスポンシブデザイン対応の設定 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Insert title here</title>
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+<!-- BootstrapのCSS読み込み -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Flat UIのCSS読み込み -->
+<link href="bootstrap/css/flat-ui.min.css" rel="stylesheet">
+<!-- jQuery読み込み※BootstrapのJSより先に読み込むこと！ -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<!-- popper.js読み込み -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<!-- BootstrapのJS読み込み -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script>
+// サイドバー非表示
+$(function(){
+  $('.sideHide').click(function(){
+    $('#sidemenu').toggleClass('is-hide');
+    $('.main').toggleClass('is-wide');
+  });
+});
+</script>
+
+<link rel="stylesheet" type="text/css" href="styles/demo3.css">
+</head>
+<body>
+  <!-- ヘッダー部 -->
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+          <div class="nav-header">
+              <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                  <span class="icon-bar"><i class="fas fa-bars" style="color:white"></i></span>
+              </button>
+              <a class="navbar-brand" >demo</a>
+          </div><!-- nav-header -->
+          <div id="navbar" class="navbar-collapse collapse in" area-expanded="true">
+                  <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="検索">
+                  </form>
+                  <i class="fas fa-cloud-download-alt" style="color:white"></i>
+                  <i class="fas fa-cog" style="color:white"></i>
+          </div><!-- navbar -->
+      </div><!-- container-fluid -->
+  </nav>
+
+
+    <div class="container-fluid">
+      <div class="row">
+
+      <!-- サイドバー -->
+        <div class="col-sm-3 col-md-2 sidebar" id="sidemenu">
+
+          <ul class="nav nav-sidebar">
+                <ul id="accordion_menu">
+                  <li>
+                    <a data-toggle="collapse" href="#menu01" aria-controls="#menu01" aria-expanded="false">デモ</a>
+                  </li>
+                  <ul id="menu01" class="collapse" data-parent="#accordion_menu">
+                    <li><a href="demo.html">demo1</a></li>
+                    <li><a href="demo2.html">demo2</a></li>
+                    <li><a href="#">リンク</a></li>
+                  </ul>
+                  <li>
+                    <a data-toggle="collapse" href="#menu02" aria-controls="#menu02" aria-expanded="false">パーツ</a>
+                  </li>
+                  <ul id="menu02" class="collapse" data-parent="#accordion_menu">
+                    <li><a href="button_text.html">button.text</a></li>
+                    <li><a href="check_radio.html">check.radio</a></li>
+                    <li><a href="progress_acordion.html">acordion.progress</a></li>
+                    <li><a href="menu.html">menu</a></li>
+                  </ul>
+                  <li>
+                    <a data-toggle="collapse" href="#menu03" aria-controls="#menu03" aria-expanded="false">マスター</a>
+                  </li>
+                  <ul id="menu03" class="collapse" data-parent="#accordion_menu">
+                    <li><a href="#">リンクサブメニュ1</a></li>
+                    <li><a href="#">リンクサブメニュ2</a></li>
+                    <li><a href="#">リンクサブメニュ3</a></li>
+                  </ul>
+                  <li>
+                    <a data-toggle="collapse" href="#menu04" aria-controls="#menu03" aria-expanded="false">設定</a>
+                  </li>
+                  <ul id="menu04" class="collapse" data-parent="#accordion_menu">
+                    <li><a href="#">リンクサブメニュ1</a></li>
+                    <li><a href="#">リンクサブメニュ2</a></li>
+                    <li><a href="#">リンクサブメニュ3</a></li>
+                  </ul>
+                </ul>
+            </ul>
+        </div> <!-- サイド -->
+
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+      <!-- メインコンテンツ -->
+          <!-- サイドバー非表示ボタン -->
+          <span class="sideHide"><i class="fas fa-bars" ></i></span>
+
+              <!-- タブ -->
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a href="#tab1" class="nav-link active" data-toggle="tab">テーブル１</a>
+            </li>
+            <li class="nav-item">
+              <a href="#tab2" class="nav-link" data-toggle="tab">テーブル２</a>
+            </li>
+          </ul>
+          <!-- 切り替え要素-->
+          <div class="tab-content">
+            <div id="tab1" class="tab-pane active">
+              <div class="container">
+                <!-- テーブル -->
+                  <div class="table-responsive">
+          	        <table class="table table-striped table-bordered text-nowrap">
+          	        <thead>
+          	            <tr>
+          	                <th>#</th>
+          	                <th>名前</th>
+          	                <th>メールアドレス</th>
+          	                <th>電話番号</th>
+          	            </tr>
+          	        </thead>
+          	        <tbody>
+          	            <tr>
+          	                <th scope="row">1</th>
+          	                <td>煌木 太郎</td>
+          	               <td>taro.kirameki@example.com</td>
+          	               <td>09011112222</td>
+          	            </tr>
+          	            <tr>
+          	               <th scope="row">2</th>
+          	               <td>煌木 次郎</td>
+          	               <td>jiro.kirameki@example.com</td>
+          	              <td>09033334444</td>
+          	            </tr>
+          	            <tr>
+          	                <th scope="row">3</th>
+          	                <td>煌木 花子</td>
+          	                <td>hanako.kirameki@example.com</td>
+          	                <td>09055556666</td>
+          	            </tr>
+          	        </tbody>
+          	        </table>
+                  </div>
+              </div>
+            </div>
+            <div id="tab2" class="tab-pane">
+              <!-- テーブル -->
+              <div class="container">
+                  <div class="table-responsive">
+          	        <table class="table table-striped table-bordered text-nowrap">
+          	        <thead>
+          	            <tr>
+          	                <th>商品コード</th>
+          	                <th>商品名</th>
+          	                <th>単価</th>
+          	                <th>生産地</th>
+          	            </tr>
+          	        </thead>
+          	        <tbody>
+          	            <tr>
+          	                <th scope="row">001</th>
+          	                <td>タン</td>
+          	               <td>500</td>
+          	               <td>日本</td>
+          	            </tr>
+          	            <tr>
+          	               <th scope="row">002</th>
+          	               <td>上ハラミ</td>
+          	               <td>1000</td>
+          	              <td>日本</td>
+          	            </tr>
+          	            <tr>
+          	                <th scope="row">003</th>
+          	                <td>コテッチャン</td>
+          	                <td>700</td>
+          	                <td>中国</td>
+          	            </tr>
+                        <tr>
+          	                <th scope="row">004</th>
+          	                <td>カルビ</td>
+          	                <td>800</td>
+          	                <td>中国</td>
+          	            </tr>
+          	        </tbody>
+          	        </table>
+                  </div>
+              </div>
+            </div>
+
+          </div>
+
+  </div><!-- container-fluid -->
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+.btnArea{
+  padding: 10px;
+}
+body{
+ background:#EEEEEE;
+}
+input[type='text'],
+input[type='date']{
+  margin:5px 0;
+}
+.container-fluid{
+  width: 70%;
+}
+.container-fluid label{
+  font-size: 20px;
+}
+
+/* ボタン */
+.cp_button {
+	display: inline-block;
+	width: 120px;
+	padding: 0.6em;
+	line-height: 1em;
+	cursor: pointer;
+	user-select: none;
+	transition: box-shadow 0.2s, transform 0.2s;
+	color: #003366;
+	border-width: 0;
+	border-style: solid;
+	border-radius: 5% / 15%;
+  background:white;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+.cp_button:hover {
+	-webkit-transform: scale(1.02);
+	        transform: scale(1.02);
+	box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.6);
+	color: #0066FF;
+}
+.cp_button:active {
+	transition-duration: 0.05s;
+	-webkit-transform: scale(0.99);
+	        transform: scale(0.99);
+	box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.15) inset;
+}
+.cp_button:focus,
+.cp_button:focus:hover {
+	color: #0066FF;
+}
+
+.cp_buttonBc{
+  background:#003366;
+  color: white;
+	border-width: 1.2px;
+}
+.cp_buttonBc:focus,
+.cp_buttonBc:hover,
+.cp_buttonBc:focus:hover {
+	color: #EEEEEE;
+}
+
+/* テキスト選択時の背景色 */
+input[type='text']:focus {
+    background-color: rgba( 0, 255, 0, 0.15 );
+    opacity: 50%;
+    color:black;
+}
+
+/*** radio ***/
+.custom-radio input[type=radio] { display:none; } /* to hide the checkbox itself */
+.custom-radio input[type=radio] + label:before {
+  font-family: "Font Awesome 5 FREE";
+	font-weight: 400;
+	content: "\f111";
+	font-size: 1em;
+  display: inline-block;
+}
+.custom-radio input[type=radio] + label:before { letter-spacing: 10px; } /* space between checkbox and label */
+
+.custom-radio input[type=radio]:checked + label:before {
+  content: "\f058";
+  font-weight: 900;
+  color: rgb( 0, 140, 255);
+}
+/***checkboxes ***/
+.custom-check input[type=checkbox] { display:none; } /* to hide the checkbox itself */
+.custom-check input[type=checkbox] + label:before {
+  font-family: "Font Awesome 5 FREE";
+	font-weight: 400;
+	content: "\f0c8";
+	font-size: 1em;
+  display: inline-block;
+}
+.custom-check input[type=checkbox] + label:before { letter-spacing: 10px; } /* space between checkbox and label */
+
+.custom-check input[type=checkbox]:checked + label:before {
+  content: "\f14a";
+  font-weight: 900;
+  color: rgb( 0, 140, 255);
+}

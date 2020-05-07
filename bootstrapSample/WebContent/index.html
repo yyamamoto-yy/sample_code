@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- IEを互換表示させない為の設定 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- レスポンシブデザイン対応の設定 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Insert title here</title>
+<!-- BootstrapのCSS読み込み -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Flat UIのCSS読み込み -->
+<link href="bootstrap/css/flat-ui.min.css" rel="stylesheet">
+<!-- jQuery読み込み※BootstrapのJSより先に読み込むこと！ -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<!-- BootstrapのJS読み込み -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<style type="text/css">
+
+
+.btn-primary:focus, .btn-primary.focus {
+  box-shadow: none;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: none;
+}
+
+.btn-embossed {
+  box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.btn-embossed.active, .btn-embossed:active {
+  box-shadow: inset 0 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.btn-embossed:active {
+  /*ボタンを押したとき*/
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}
+
+</style>
+</head>
+<body>
+
+   <ol class="breadcrumb">
+     <li><a href="button_text.html">ボタン・テキスト</a></li>/
+     <li><a href="check_radio.html">チェック・ラジオ</a></li>/
+     <li><a href="progress_acordion.html">アコーディオン・プログレス</li>/
+     <li><a href="menu.html">メニュー</li>
+   </ol>
+
+    <h2>ボタンの使い方</h2>
+    <button type="button" class="btn btn-default">Default</button>
+    <button type="button" class="btn btn-primary btn-lg">Primary lg</button>
+    <button type="button" class="btn btn-secondary btn-sm">Secondary sm</button>
+    <button type="button" class="btn btn-success" disabled>Success disabled</button>
+    <button type="button" class="btn btn-info">Info</button>
+    <button type="button" class="btn btn-warning">Warning</button>
+    <button type="button" class="btn btn-danger">Danger</button>
+    <button type="button" class="btn btn-dark">Dark</button>
+    <button type="button" class="btn btn-light">Light</button>
+    <button type="button" class="btn btn-primary rounded-0">角ボタン</button>
+    <button type="button" class="btn btn-primary rounded-pill">角丸ボタン</button>
+    <button type="button" class="btn btn-primary rounded-circle p-0" style="width:2rem;height:2rem;">＋</button>
+    <button type="button" class="btn btn-link">Link</button>
+    <h2>ボタン（Flat UI）の使い方</h2>
+    <button type="button" class="btn btn-primary btn-hg">Primary hg</button>
+    <button type="button" class="btn btn-primary btn-embossed">embossed</button>
+    <button class="btn btn-inverse btn-embossed">Inverse</button>
+    <h2>グリッドシステム</h2>
+    <header style="background-color:gray">Header</header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2" style="background-color:red;">Red</div>
+            <div class="col-sm-8" style="background-color:blue;">Blue</div>
+            <div class="col-sm-2" style="background-color:yellow;">Yellow</div>
+        </div>
+    </div>
+    <footer style="background-color:gray">Footer</footer>
+    <br>
+    <header style="background-color:gray">Header</header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2" style="background-color:red;">Red</div>
+            <div class="col-sm-8 d-none d-sm-block" style="background-color:blue;">Blue</div>
+            <div class="col-sm-2" style="background-color:yellow;">Yellow</div>
+        </div>
+    </div>
+    <footer style="background-color:gray">Footer</footer>
+    <h2>テーブルの使い方</h2>
+    <div class="container">
+        <div class="table-responsive">
+	        <table class="table table-striped table-bordered text-nowrap">
+	        <thead>
+	            <tr>
+	                <th>#</th>
+	                <th>名前</th>
+	                <th>メールアドレス</th>
+	                <th>電話番号</th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	            <tr>
+	                <th scope="row">1</th>
+	                <td>煌木 太郎</td>
+	               <td>taro.kirameki@example.com</td>
+	               <td>09011112222</td>
+	            </tr>
+	            <tr>
+	               <th scope="row">2</th>
+	               <td>煌木 次郎</td>
+	               <td>jiro.kirameki@example.com</td>
+	              <td>09033334444</td>
+	            </tr>
+	            <tr>
+	                <th scope="row">3</th>
+	                <td>煌木 花子</td>
+	                <td>hanako.kirameki@example.com</td>
+	                <td>09055556666</td>
+	            </tr>
+	        </tbody>
+	        </table>
+        </div>
+    </div>
+</body>
+</html>

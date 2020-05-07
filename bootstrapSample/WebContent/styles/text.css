@@ -1,0 +1,155 @@
+
+.text1 {
+  width: 50%;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  margin: 8px;
+  outline: none;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+.text1:focus {
+  border-color: dodgerBlue;
+  box-shadow: 0 0 8px 0 dodgerBlue;
+}
+
+.inputWithIcon .text1 {
+  padding-left: 40px;
+}
+
+.inputWithIcon {
+  position: relative;
+}
+
+
+
+.inputWithIcon .text1:focus + i {
+  color: dodgerBlue;
+}
+
+.inputWithIcon.inputIconBg i {
+  background-color: #aaa;
+  color: #fff;
+  padding: 9px 4px;
+  border-radius: 4px 0 0 4px;
+}
+
+.inputWithIcon.inputIconBg .text1:focus + i {
+  color: #fff;
+  background-color: dodgerBlue;
+}
+
+/****   ****/
+.cp_iptxt {
+	position: relative;
+	width: 80%;
+	margin: 40px 3%;
+}
+.cp_iptxt input[type='text'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 50%;
+	letter-spacing: 1px;
+	padding-left: 4em;
+}
+.cp_iptxt input[type='text']:focus {
+	outline: none;
+}
+.ef {
+	padding: 4px 0;
+	border: 0;
+	border-bottom: 1px solid #1b2538;
+	background-color: transparent;
+}
+.ef ~ .focus_line {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 2px;
+	transition: 0.4s;
+	background-color: #da3c41;
+}
+.ef:focus ~ .focus_line,
+.cp_iptxt.ef ~ .focus_line {
+	width: 50%;
+	transition: 0.4s;
+}
+.ef ~ label {
+	position: absolute;
+	z-index: -1;
+	top: 4px;
+	left: 0;
+	width: 50%;
+	transition: 0.3s;
+	letter-spacing: 0.5px;
+	color: #aaaaaa;
+}
+.ef:focus ~ label, .cp_iptxt.ef ~ label {
+	font-size: 12px;
+	top: -16px;
+	transition: 0.3s;
+	color: #da3c41;
+}
+
+
+/***  ***/
+.cp_iptxt2 {
+	position: relative;
+	width: 80%;
+	margin: 40px 3%;
+}
+.cp_iptxt2 input[type='text'] {
+	font: 15px/24px sans-serif;
+	box-sizing: border-box;
+	width: 50%;
+	letter-spacing: 1px;
+	padding-left: 4em;
+}
+.cp_iptxt2 input[type='text']:focus {
+	outline: none;
+}
+.ef2 {
+	position: relative;
+	padding: 7px 15px;
+	border: 0;
+	border: 1px solid #1b2538;
+	background: transparent;
+}
+.ef2 ~ .focus_bg {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	transition: 0.4s;
+	background-color: transparent;
+}
+.ef2:focus {
+	border: 1px solid #da3c41;
+}
+.ef2:focus ~ .focus_bg, .cp_iptxt2.ef ~ .focus_bg {
+	width: 50%;
+	transition: 0.4s;
+	background-color: rgba(218,60,65,.3);
+}
+.ef2 ~ label {
+	position: absolute;
+	z-index: -1;
+	top: 10px;
+	left: 14px;
+	width: 100%;
+	transition: 0.3s;
+	letter-spacing: 0.5px;
+	color: #aaaaaa;
+}
+.ef2:focus ~ label, .cp_iptxt2.ef2 ~ label {
+	font-size: 12px;
+	top: -18px;
+	left: 0;
+	transition: 0.3s;
+	color: #da3c41;
+}

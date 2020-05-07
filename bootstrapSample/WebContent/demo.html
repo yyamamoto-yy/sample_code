@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- IEを互換表示させない為の設定 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- レスポンシブデザイン対応の設定 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Insert title here</title>
+<!-- fontawesomeの読み込み -->
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<!-- BootstrapのCSS読み込み -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Flat UIのCSS読み込み -->
+<link href="bootstrap/css/flat-ui.min.css" rel="stylesheet">
+<!-- jQuery読み込み※BootstrapのJSより先に読み込むこと！ -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<!-- popper.js読み込み -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<!-- BootstrapのJS読み込み -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+
+</style>
+<link rel="stylesheet" type="text/css" href="styles/demo.css">
+</head>
+<body>
+  <header style="background-color:#003366">
+    <div class="btn-group" role="group" aria-label="Basic example">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle"
+                type="button" id="dropdownMenu1" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+          パーツ
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <a class="dropdown-item" href="button_text.html">ボタン・テキスト</a>
+          <a class="dropdown-item" href="check_radio.html">チェック・ラジオ</a>
+          <a class="dropdown-item" href="progress_acordion.html">アコーディオン・プログレス</a>
+          <a class="dropdown-item" href="menu.html">メニュー</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle"
+                type="button" id="dropdownMenu1" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+          デモ
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+          <a class="dropdown-item" href="demo2.html">デモ２</a>
+          <a class="dropdown-item" href="demo3.html">デモ３</a>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+
+
+    <div class="container-fluid">
+      <div class="col-sm-12">
+        <h3>会員登録</h3></div>
+      <div class="row">
+          <div class="col-sm-12" style="background-color:#003366;color:white">個人情報</div>
+      </div>
+      <div class="row">
+          <div class="col-sm-3" style="background-color:#EEEEEE;">
+            <label>名前</label></div>
+          <div class="col-sm-9" style="background-color:#EEEEEE;">
+            <input class="form-control"  type="text" placeholder="">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-3" style="background-color:#EEEEEE;">
+            <label>生年月日</label></div>
+          <div class="col-sm-9" style="background-color:#EEEEEE;">
+              <input class="form-control" type="text" placeholder="1995年1月1日→19950101"></div>
+      </div>
+      <div class="row">
+          <div class="col-sm-12" style="background-color:#003366;color:white">契約内容</div>
+      </div>
+      <div class="row">
+          <div class="col-sm-3" style="background-color:#EEEEEE;">
+          <label>区分</label></div>
+          <div class="col-sm-9" style="display:flex;background-color:#EEEEEE;">
+            <div class="custom-control custom-radio"  style="padding-left:0;">
+              <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+              <label for="customRadio1">ビジター</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+              <label  for="customRadio2">マンスリー</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" id="customRadio3" name="customRadio" class="custom-control-input">
+              <label  for="customRadio3">ファミリー</label>
+            </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-3" style="background-color:#EEEEEE;">
+            <label>保険</label></div>
+          <div class="col-sm-9" style="background-color:#EEEEEE;">
+            <div class="custom-check">
+              <input type="checkbox" id="customCheck" />
+            	<label for="customCheck"  style="font-size: 1em;">加入済み</label>
+            </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-3" style="background-color:#EEEEEE;">
+            <label>更新日</label></div>
+          <div class="col-sm-9" style="background-color:#EEEEEE;">
+            <input class="form-control"  type="date">
+          </div>
+      </div>
+      <div class="col-sm-12" style="background-color:#EEEEEE;">
+          <div class="alert alert-danger" role="alert">
+            <strong>未入力の項目があります。</strong>全ての項目を入力してください。
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-sm-12" style="background-color:#003366;color:white">
+            <div class="btnArea">
+              <button class="cp_button cp_buttonBc">閉じる</button>
+              <button class="cp_button">登録</button>
+              <button class="cp_button">更新</button>
+              <!-- Button trigger modal -->
+              <button type="button" class="cp_button" data-toggle="modal" data-target="#exampleModalCentered">
+              確認:modal
+              </button>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+
+
+<!-- Modal -->
+<div class="modal" id="exampleModalCentered" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenteredLabel">登録情報確認</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        名前：<br>
+        生年月日：
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">キャンセル</button>
+        <button type="button" class="btn btn-primary" style="background-color:#003366">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>

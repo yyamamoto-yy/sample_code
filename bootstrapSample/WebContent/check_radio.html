@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- IEを互換表示させない為の設定 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- レスポンシブデザイン対応の設定 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Insert title here</title>
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+<!-- BootstrapのCSS読み込み -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Flat UIのCSS読み込み -->
+<link href="bootstrap/css/flat-ui.min.css" rel="stylesheet">
+<!-- jQuery読み込み※BootstrapのJSより先に読み込むこと！ -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<!-- BootstrapのJS読み込み -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+body{
+  width: 80%;
+  margin: auto;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="styles/check.css">
+<link rel="stylesheet" type="text/css" href="styles/radio.css">
+
+</head>
+<body>
+    <h4>チェックボックス</h4>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" id="customCheck1">
+      <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+    </div>
+
+    <div class="cp_ipcheck">
+    	<input type="checkbox" id="b_ch1" checked />
+    	<label for="b_ch1">ネコ</label>
+    	<input type="checkbox" id="b_ch2" />
+    	<label for="b_ch2">イヌ</label>
+    	<input type="checkbox" id="b_ch3" />
+    	<label for="b_ch3">ウサギ</label>
+    </div>
+
+    <div class="check3">
+      <input type="checkbox" id="b1" />
+    	<label for="b1"  style="font-size: 1.5em;">Fonte</label>
+      <input type="checkbox" id="b2" />
+    	<label for="b2"  style="font-size: 1.5em;">Awesome</label>
+    </div>
+
+      <div class="check4">
+        <input id="option1" name="option1" type="checkbox"/>
+        <label for="option1">Option One</label>
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+
+
+    <h4>ラジオボタン</h4>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+      <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+      <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
+    </div><br>
+
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-outline-secondary active">
+        <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+      </label>
+      <label class="btn btn-outline-secondary">
+        <input type="radio" name="options" id="option2" autocomplete="off"> Radio
+      </label>
+    </div>
+
+    <div class="cp_ipradio">
+    	<input type="radio" name="cpipr03" id="a_rb1" />
+    	<label for="a_rb1">ネコ</label>
+    	<input type="radio" name="cpipr03" id="a_rb2" />
+    	<label for="a_rb2">イヌ</label>
+    	<input type="radio" name="cpipr03" id="a_rb3" />
+    	<label for="a_rb3">ウサギ</label>
+    </div>
+
+
+
+
+
+</body>
+</html>

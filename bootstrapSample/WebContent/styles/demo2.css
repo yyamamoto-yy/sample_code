@@ -1,0 +1,164 @@
+/*** サイドメニュー表示 ***/
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ol, ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header .navbar{
+  padding-left: 45px;
+}
+.side {
+  height: 65vh;
+}
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  display: inline-block;
+}
+/* menu */
+.sidebar .sidemenu {
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  width: 200px;
+  height: 100%;
+  cursor: pointer;
+  -webkit-transition: 0.53s transform;
+          transition: 0.53s transform;
+  -webkit-transition-timing-function: cubic-bezier(.38,.52,.23,.99);
+          transition-timing-function: cubic-bezier(.38,.52,.23,.99);
+  background-color: rgba(1,1,1 ,1);
+  opacity: 0.8;
+}
+.sidebar .sidemenu ul {
+  margin: 0;
+  padding: 0;
+}
+.sidebar .sidemenu li {
+  list-style: none;
+}
+.sidebar .sidemenu li a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+.sidebar #side_toggle {
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+.sidebar #side_toggle:checked ~ .sidemenu {
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+}
+/* menu toggle */
+.sidebar #side_toggle ~ label {
+  display: block;
+  padding: 1px 0;
+  cursor: pointer;
+  -webkit-transition: 0.5s transform;
+          transition: 0.5s transform;
+  -webkit-transition-timing-function: cubic-bezier(.61,-0.38,.37,1.27);
+          transition-timing-function: cubic-bezier(.61,-0.38,.37,1.27);
+  text-align: center;
+  color: #333333;
+}
+.sidebar #side_toggle:checked ~ label {
+  -webkit-transform: translateX(180px);
+          transform: translateX(180px);
+}
+.sidebar #side_toggle ~ label::before {
+  font-family: "Font Awesome 5 FREE";
+  font-weight: 900;
+  content: "\f0c9";
+  font-size: 2em;
+}
+.sidebar #side_toggle:checked ~ label::before {
+  font-family: "Font Awesome 5 FREE";
+  font-weight: 900;
+  content: '\f00d';
+}
+
+
+
+/* ボタン */
+.btn-default {
+	display: inline-block;
+	width: 120px;
+	padding: 0.6em;
+	line-height: 1em;
+	cursor: pointer;
+	user-select: none;
+	transition: box-shadow 0.2s, transform 0.2s;
+	color: white;
+	border-width: 0;
+	border-style: solid;
+	border-radius: 5% / 15%;
+  background:#1abc9c;
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+.btn-default:hover {
+	-webkit-transform: scale(1.02);
+	        transform: scale(1.02);
+	box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.6);
+	color: white;
+  background: #1bbd9d;
+}
+.btn-default:active {
+	transition-duration: 0.05s;
+	-webkit-transform: scale(0.99);
+	        transform: scale(0.99);
+	box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.15) inset;
+  color: white;
+  background: #1bbd9d;
+}
+
+/* カード内 */
+.info-count{
+  font-size: 50px;
+  color: #777;
+}
+.link-btn{
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  width: 100px
+}
+
+.card-body{
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+.card-body th{
+  padding-bottom: 2px;
+  padding-top: 2px;
+}
+.card-body h4{
+  margin-bottom: 2px;
+}
+.col-sm-12{
+  margin-top:4px;
+  margin-bottom: 4px;
+}
+
+
+/* バー */
+.progress-bar p{
+  margin: 0;
+}
+#bar-status{
+  margin-top: 20px;
+  text-align: center;
+}

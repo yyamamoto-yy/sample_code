@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- IEを互換表示させない為の設定 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- レスポンシブデザイン対応の設定 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Insert title here</title>
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+<!-- BootstrapのCSS読み込み -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Flat UIのCSS読み込み -->
+<link href="bootstrap/css/flat-ui.min.css" rel="stylesheet">
+<!-- jQuery読み込み※BootstrapのJSより先に読み込むこと！ -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<!-- BootstrapのJS読み込み -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="styles/menu.css">
+<style type="text/css">
+body{
+  width: 80%;
+  margin: auto;
+}
+</style>
+<link href="/styles/css/all.css" rel="stylesheet">
+</head>
+<body>
+  <div class="cp_cont">
+<div class="cp_offcm04">
+  <input type="checkbox" id="cp_toggle04">
+  <label for="cp_toggle04"><span></span></label>
+  <div class="cp_menu">
+  <ul>
+  <li><a href="#">menu1</a></li>
+  <li><a href="#">menu2</a></li>
+  <li><a href="#">menu3</a></li>
+  <li><a href="#">menu4</a></li>
+  <li><a href="#">menu5</a></li>
+  </ul>
+  </div>
+</div>
+<div class="cp_contents">
+  <h4>ハンバーガーメニュー</h4>
+  </div>
+</div>
+</div>
+
+
+<button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    フォーム表示
+</button>
+<div class="collapse" id="collapseExample">
+    <div class="border p-3">
+      <form action="MasterDormitory" method="post"  id ="tab1" name="searchForm">
+        <h4>検索</h4>
+        <table class="input-table">
+          <tr>
+              <td class="label">物件ID</td>
+              <td><input type="text"></td>
+          </tr>
+          <tr>
+              <td class="label">物件名</td>
+              <td><input type="text"></td>
+          </tr>
+          <tr>
+              <td class="label">更新日時</td>
+              <td><input type="date">から&nbsp;&nbsp;
+              <input type="date">まで&nbsp;</td>
+          </tr>
+        </table>
+        <button type="submit">検索</button>
+        <button type="button">リセット</button>
+        <button type="submit"  onclick="return confirm('検索結果をダウンロードしますか？');">ダウンロード</button>
+
+    </form>
+
+    </div>
+</div>
+
+
+</body>
+</html>
