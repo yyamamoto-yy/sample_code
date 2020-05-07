@@ -1,0 +1,22 @@
+﻿@model WebMVC.Models.Item
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Content</title>
+</head>
+<body>
+    <div>
+        <p>情報を表示します。</p>
+        <div>@Html.Encode(Model.Name)</div>
+        <div>@Html.Encode(Model.Value)</div>
+        <div>@Html.Encode(Model.Code)</div>
+    </div>
+</body>
+</html>

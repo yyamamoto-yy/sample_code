@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>WebAPI</h1>
+
+    <div>
+        <!-- ボタンを押すとAPIを呼ぶ -->
+        <button onclick="callHelloWorld()">GET /api/Default</button>
+        <br />
+        <span id="ResultPlaceHolder">ここにAPIの結果が入る</span>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        function callHelloWorld() {
+            // jQueryを使って呼ぶ
+            $.ajax("/api/Default").then(function (r) {
+                $("#ResultPlaceHolder").text(r);
+            });
+        }
+    </script>
+</body>
+</html>

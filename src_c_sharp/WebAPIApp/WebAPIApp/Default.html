@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>WebAPI</h1>
+
+    <div>
+        <!-- ボタンを押すとAPIを呼ぶ -->
+        <button onclick="callHelloWorld()">GET /api/Default</button>
+        <br />
+        <span id="ResultPlaceHolder">以下APIの結果を表示</span>
+        <table id="list"></table>
+
+        <table id="dataList"></table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        function callHelloWorld() {
+            // jQueryを使って呼ぶ
+            //$.ajax("/api/Default").then(function (r) {
+            //    $("#ResultPlaceHolder").text(r);
+            //});
+                    
+            $("#list").append("<tr><td>name</td><td>price</td></tr>");
+            $.get('/api/Default', function (data) {
+                var lists = data;
+                $("#list").append("<tr><td>" + lists.name + "</td>" +
+                    "<td>" + lists.price + "</td></tr>");
+            });
+
+            $("#dataList").empty();
+            $("#dataList").append("<tr><td>ID</td><td>名前</td><td>年齢</td><td>出身</td></tr>");
+            $.post('/api/Default', function (data) {
+                var lists = data;
+                for (var i = 0; i < lists.length; i++) {
+                   let list = lists[i];
+                 $("#dataList").append("<tr><td>" + list.id + "</td>" +
+                     "<td>" + list.name + "</td>" +
+                     "<td>" + list.age + "</td>" +
+                     "<td>" + list.country + "</td></tr>");
+                }
+        
+            });
+            
+        }
+    </script>
+</body>
+</html>

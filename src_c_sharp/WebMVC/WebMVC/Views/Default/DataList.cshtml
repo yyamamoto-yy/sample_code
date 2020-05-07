@@ -1,0 +1,56 @@
+﻿@model IEnumerable<WebMVC.Models.DataList>
+@{
+                /**/
+
+                Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <title>DataList</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm(
+      "DataAdd",
+      "Default",
+      null,
+      FormMethod.Post,
+      new { enctype = "multipart/form-data" }
+      ))
+        {
+            <label>名前</label>
+            @Html.TextBox("name", "") <br />
+            <label>年齢</label>
+            @Html.TextBox("age", "") <br />
+            <label>出身</label>
+            @Html.TextBox("country", "") <br />
+            <input type="submit" value="登録" />
+        }
+
+
+        <table class="table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>名前</th>
+                <th>年齢</th>
+                <th>出身</th>
+            </tr>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(list => item.id)</td>
+                    <td>@Html.DisplayFor(list => item.name)</td>
+                    <td>@Html.DisplayFor(list => item.age)</td>
+                    <td>@Html.DisplayFor(list => item.country)</td>
+
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

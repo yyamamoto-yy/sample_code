@@ -1,0 +1,7 @@
+C:\Users\anvil\source\repos\ConsoleDbConn\ConsoleDbConn\obj\Debug\ConsoleDbConn.csprojAssemblyReference.cache
+C:\Users\anvil\source\repos\ConsoleDbConn\ConsoleDbConn\obj\Debug\ConsoleDbConn.csproj.CoreCompileInputs.cache
+C:\Users\anvil\source\repos\ConsoleDbConn\ConsoleDbConn\bin\Debug\ConsoleDbConn.exe.config
+C:\Users\anvil\source\repos\ConsoleDbConn\ConsoleDbConn\bin\Debug\ConsoleDbConn.exe
+C:\Users\anvil\source\repos\ConsoleDbConn\ConsoleDbConn\bin\Debug\ConsoleDbConn.pdb
+C:\Users\anvil\source\repos\ConsoleDbConn\ConsoleDbConn\obj\Debug\ConsoleDbConn.exe
+C:\Users\anvil\source\repos\ConsoleDbConn\ConsoleDbConn\obj\Debug\ConsoleDbConn.pdb
